@@ -1,4 +1,4 @@
-/* ─── Quests Panel ───────────────────────────────────────────────────────────── */
+/* ─── Quests Panel (polished) ────────────────────────────────────────────────── */
 
 .q-root { width: 100%; }
 
@@ -13,11 +13,11 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 3px;
   background: rgba(255,255,255,0.02);
-  border: 1px solid transparent;
-  border-radius: 8px;
-  padding: 8px 12px;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 10px;
+  padding: 10px 14px;
 }
 
 .q-countdown-label {
@@ -31,6 +31,7 @@
   font-size: 15px;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
+  color: var(--text);
 }
 
 /* Summary row */
@@ -59,6 +60,7 @@
 .q-summary-count {
   font-size: 12px;
   font-weight: 600;
+  color: var(--text);
 }
 
 /* Tabs */
@@ -71,8 +73,8 @@
 .q-tab {
   flex: 1;
   background: transparent;
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 10px;
   color: #64748b;
   font-size: 13px;
   font-weight: 500;
@@ -87,14 +89,14 @@
 }
 
 .q-tab:hover {
-  border-color: rgba(255,255,255,0.14);
+  border-color: rgba(255,255,255,0.12);
   color: #94a3b8;
 }
 
 .q-tab-badge {
   font-size: 10px;
   font-weight: 600;
-  background: rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.05);
   border-radius: 99px;
   padding: 1px 7px;
 }
@@ -103,23 +105,23 @@
 .q-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 10px;
+  gap: 12px;
 }
 
 /* Quest card */
 .q-card {
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 1rem;
-  border: 1px solid rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.06);
   background: rgba(255,255,255,0.02);
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
   transition: border-color 0.15s, transform 0.15s;
 }
 
-.q-card:hover { transform: translateY(-2px); border-color: rgba(255,255,255,0.12); }
-.q-card-done  { opacity: 0.7; }
+.q-card:hover { transform: translateY(-2px); border-color: rgba(255,255,255,0.10); }
+.q-card-done  { opacity: 0.65; }
 
 .q-card-top {
   display: flex;
@@ -158,7 +160,7 @@
 
 .q-pb-track {
   flex: 1;
-  background: rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.05);
   border-radius: 3px;
   overflow: hidden;
 }
@@ -171,9 +173,10 @@
 
 .q-progress-pct {
   font-size: 10px;
-  color: #475569;
+  color: var(--text);
   min-width: 28px;
   text-align: right;
+  font-weight: 600;
 }
 
 .q-card-footer {
@@ -244,7 +247,7 @@
 /* Story card */
 .sq-card {
   flex: 1;
-  border-radius: 10px;
+  border-radius: 12px;
   border: 1px solid transparent;
   padding: 0.9rem 1rem;
   margin-bottom: 8px;
@@ -254,14 +257,14 @@
 }
 
 .sq-card:hover:not(.sq-locked) {
-  background: rgba(255,255,255,0.04);
+  background: rgba(255,255,255,0.03);
 }
 
-.sq-done   { opacity: 0.65; }
+.sq-done   { opacity: 0.6; }
 .sq-locked { cursor: default; opacity: 0.4; }
 
 .sq-active {
-  background: rgba(245,158,11,0.04);
+  background: rgba(240,168,96,0.03);
 }
 
 .sq-card-header {
@@ -312,17 +315,21 @@
 }
 
 .sq-lore {
-  background: rgba(245,158,11,0.05);
-  border-left: 2px solid rgba(245,158,11,0.4);
-  border-radius: 0 6px 6px 0;
+  background: rgba(240,168,96,0.03);
+  border-left: 2px solid rgba(240,168,96,0.30);
+  border-radius: 0 8px 8px 0;
   padding: 10px 12px;
   margin: 0;
   position: relative;
+  font-size: 13px;
+  color: #94a3b8;
+  font-style: italic;
+  line-height: 1.6;
 }
 
 .sq-lore-mark {
   font-size: 28px;
-  color: rgba(245,158,11,0.3);
+  color: rgba(240,168,96,0.25);
   line-height: 0;
   position: absolute;
   top: 14px;
@@ -334,11 +341,4 @@
   color: #64748b;
   line-height: 1.5;
   margin: 0;
-}
-
-.sq-lore {
-  font-size: 13px;
-  color: #94a3b8;
-  font-style: italic;
-  line-height: 1.6;
 }

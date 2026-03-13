@@ -14,20 +14,20 @@ async function fetchAchievements() {
 }
 
 const TIER_STYLES = {
-  BRONZE:    { color: '#cd7f32', bg: 'rgba(205,127,50,0.12)',  label: 'Bronze'    },
-  SILVER:    { color: '#a8a9ad', bg: 'rgba(168,169,173,0.12)', label: 'Silver'    },
-  GOLD:      { color: '#ffd700', bg: 'rgba(255,215,0,0.12)',   label: 'Gold'      },
-  PLATINUM:  { color: '#e5e4e2', bg: 'rgba(229,228,226,0.15)', label: 'Platinum'  },
-  LEGENDARY: { color: '#ff6b35', bg: 'rgba(255,107,53,0.15)',  label: 'Legendary' },
+  BRONZE: { color: '#cd7f32', bg: 'rgba(205,127,50,0.12)', label: 'Bronze' },
+  SILVER: { color: '#a8a9ad', bg: 'rgba(168,169,173,0.12)', label: 'Silver' },
+  GOLD: { color: '#ffd700', bg: 'rgba(255,215,0,0.12)', label: 'Gold' },
+  PLATINUM: { color: '#e5e4e2', bg: 'rgba(229,228,226,0.15)', label: 'Platinum' },
+  LEGENDARY: { color: '#ff6b35', bg: 'rgba(255,107,53,0.15)', label: 'Legendary' },
 };
 
 const CATEGORY_LABELS = {
-  forge:    { label: 'Forge',    icon: '⚒' },
-  heat:     { label: 'Heat',     icon: '🔥' },
-  combo:    { label: 'Combo',    icon: '🔗' },
+  forge: { label: 'Forge', icon: '⚒' },
+  heat: { label: 'Heat', icon: '🔥' },
+  combo: { label: 'Combo', icon: '🔗' },
   identity: { label: 'Identity', icon: '🔑' },
-  vault:    { label: 'Vault',    icon: '🔒' },
-  secret:   { label: 'Secret',   icon: '👁' },
+  vault: { label: 'Vault', icon: '🔒' },
+  secret: { label: 'Secret', icon: '👁' },
 };
 
 function AchievementModal({ ach, onClose }) {
@@ -122,12 +122,12 @@ function AchievementCard({ ach, isNew, onClick }) {
 }
 
 export function AchievementsPanel({ newAchievementIds = [] }) {
-  const [data, setData]         = useState(null);
-  const [loading, setLoading]   = useState(true);
-  const [tab, setTab]           = useState('all');
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [tab, setTab] = useState('all');
   const [tierFilter, setTierFilter] = useState('all');
   const [selected, setSelected] = useState(null);
-  const [newIds, setNewIds]     = useState(new Set());
+  const [newIds, setNewIds] = useState(new Set());
 
   useEffect(() => {
     setLoading(true);

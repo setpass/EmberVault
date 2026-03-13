@@ -24,10 +24,10 @@ const ACTION_LABELS = {
 };
 
 const HEAT_STAGES = [
-  { threshold: 0,  label: 'Cold Start', color: '#64748b', glow: 'rgba(100,116,139,0.3)' },
-  { threshold: 35, label: 'Tempered',   color: '#d97706', glow: 'rgba(217,119,6,0.35)'  },
-  { threshold: 65, label: 'White Heat', color: '#f59e0b', glow: 'rgba(245,158,11,0.4)'  },
-  { threshold: 85, label: 'Starfire',   color: '#ef4444', glow: 'rgba(239,68,68,0.45)'  },
+  { threshold: 0,  label: 'Cold Start', color: '#64748b', glow: 'rgba(100,116,139,0.25)' },
+  { threshold: 35, label: 'Tempered',   color: '#d97706', glow: 'rgba(217,119,6,0.28)'  },
+  { threshold: 65, label: 'White Heat', color: '#f59e0b', glow: 'rgba(245,158,11,0.32)'  },
+  { threshold: 85, label: 'Starfire',   color: '#ef4444', glow: 'rgba(239,68,68,0.35)'  },
 ];
 
 function getStage(heat) {
@@ -123,8 +123,8 @@ export function HeatChain({ forge: forgeProp, onForgeUpdate }) {
               <p className="eyebrow">Live forge engine</p>
               <h3 className="hc-stage-label" style={{ color: stage.color }}>{stage.label}</h3>
             </div>
-            <div className="hc-heat-badge" style={{ background: stage.glow, borderColor: stage.color }}>
-              <span className="hc-heat-value" style={{ color: stage.color }}>{heat}</span>
+            <div className="hc-heat-badge" style={{ background: stage.glow, borderColor: stage.color + '44' }}>
+              <span className="hc-heat-value">{heat}</span>
               <span className="hc-heat-pct">%</span>
             </div>
           </div>
@@ -172,7 +172,7 @@ export function HeatChain({ forge: forgeProp, onForgeUpdate }) {
             <div className="hc-combo-info">
               <div>
                 <p className="eyebrow">Combo chain</p>
-                <strong style={{ color: comboActive ? stage.color : '#64748b' }}>
+                <strong style={{ color: comboActive ? '#f0f0f8' : '#64748b' }}>
                   {forge?.comboChain ?? '0 strike chain'}
                 </strong>
                 {multiplier > 1 && comboActive && (
@@ -184,7 +184,7 @@ export function HeatChain({ forge: forgeProp, onForgeUpdate }) {
               {comboActive && countdown > 0 ? (
                 <div className="hc-countdown active">
                   <span className="hc-countdown-label">Chain expires in</span>
-                  <span className="hc-countdown-value" style={{ color: stage.color }}>
+                  <span className="hc-countdown-value">
                     {fmtCountdown(countdown)}
                   </span>
                 </div>

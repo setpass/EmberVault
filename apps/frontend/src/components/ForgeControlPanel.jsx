@@ -45,19 +45,19 @@ function ResultCard({ result }) {
       <div className="fcp-result-metrics">
         <div className="fcp-metric">
           <span className="fcp-metric-label">Heat gain</span>
-          <strong className="fcp-metric-value" style={{ color: heatColor }}>
+          <strong className="fcp-metric-value">
             +{result.heatGain}
           </strong>
         </div>
         <div className="fcp-metric">
           <span className="fcp-metric-label">Multiplier</span>
-          <strong className="fcp-metric-value" style={{ color: result.comboMultiplier > 1 ? '#f59e0b' : '#64748b' }}>
+          <strong className="fcp-metric-value">
             ×{result.comboMultiplier?.toFixed(2)}
           </strong>
         </div>
         <div className="fcp-metric">
           <span className="fcp-metric-label">Total heat</span>
-          <strong className="fcp-metric-value" style={{ color: heatColor }}>
+          <strong className="fcp-metric-value">
             {result.forge?.heat}%
           </strong>
         </div>
@@ -162,7 +162,7 @@ export function ForgeControlPanel({ onForgeUpdate }) {
                 <span className="fcp-action-name">{action.label}</span>
                 <span className="fcp-action-desc">{action.desc}</span>
               </div>
-              <span className="fcp-action-heat" style={{ color: stageColor(action.heat * 2) }}>
+              <span className="fcp-action-heat">
                 +{action.heat}
               </span>
             </button>

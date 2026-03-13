@@ -2,10 +2,10 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { forgeTick } from '../lib/api';
 
 const HEAT_STAGES = [
-  { threshold: 0,  label: 'Cold Start', color: '#64748b', glow: 'rgba(100,116,139,0.25)' },
-  { threshold: 35, label: 'Tempered',   color: '#d97706', glow: 'rgba(217,119,6,0.3)'    },
-  { threshold: 65, label: 'White Heat', color: '#f59e0b', glow: 'rgba(245,158,11,0.35)'  },
-  { threshold: 85, label: 'Starfire',   color: '#ef4444', glow: 'rgba(239,68,68,0.4)'    },
+  { threshold: 0,  label: 'Cold Start', color: '#64748b', glow: 'rgba(100,116,139,0.20)' },
+  { threshold: 35, label: 'Tempered',   color: '#d97706', glow: 'rgba(217,119,6,0.22)'    },
+  { threshold: 65, label: 'White Heat', color: '#f59e0b', glow: 'rgba(245,158,11,0.25)'  },
+  { threshold: 85, label: 'Starfire',   color: '#ef4444', glow: 'rgba(239,68,68,0.28)'    },
 ];
 
 function getStage(heat) {
@@ -119,7 +119,7 @@ export function ForgeTimer({ onDecayUpdate }) {
         {/* Live heat */}
         <div className="ft-cell ft-heat-cell">
           <p className="eyebrow">Live heat</p>
-          <div className="ft-heat-display" style={{ '--stage-color': stage.color, '--stage-glow': stage.glow }}>
+          <div className="ft-heat-display">
             <span className="ft-heat-number">{Math.floor(localHeat ?? tick.heat)}</span>
             <span className="ft-heat-unit">%</span>
           </div>
@@ -144,7 +144,6 @@ export function ForgeTimer({ onDecayUpdate }) {
             <>
               <div
                 className={`ft-countdown-number ${isCritical ? 'ft-countdown-critical' : ''}`}
-                style={{ color: isCritical ? '#ef4444' : stage.color }}
               >
                 {fmtCountdown(localMs)}
               </div>
@@ -169,7 +168,7 @@ export function ForgeTimer({ onDecayUpdate }) {
               </div>
               <div className="ft-multiplier-row">
                 <span className="ft-multiplier-label">Combo multiplier</span>
-                <span className="ft-multiplier-value" style={{ color: stage.color }}>
+                <span className="ft-multiplier-value">
                   ×{multiplier.toFixed(2)}
                 </span>
               </div>

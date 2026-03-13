@@ -1,4 +1,4 @@
-/* ─── Progression Panel ──────────────────────────────────────────────────────── */
+/* ─── Progression Panel (polished) ───────────────────────────────────────────── */
 
 .prog-root { width: 100%; }
 
@@ -7,14 +7,14 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  background: rgba(245,158,11,0.1);
-  border: 1px solid rgba(245,158,11,0.35);
-  border-radius: 8px;
+  background: rgba(240,168,96,0.08);
+  border: 1px solid rgba(240,168,96,0.25);
+  border-radius: 10px;
   padding: 10px 14px;
   margin-bottom: 1rem;
   font-size: 14px;
   font-weight: 600;
-  color: #f59e0b;
+  color: var(--accent2);
   animation: flashIn 0.25s ease;
 }
 
@@ -28,8 +28,8 @@
 /* XP Bar */
 .prog-xpbar-wrap {
   background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
   padding: 1rem;
   margin-bottom: 1.25rem;
 }
@@ -46,8 +46,8 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  background: rgba(245,158,11,0.1);
-  border: 1px solid rgba(245,158,11,0.3);
+  background: rgba(240,168,96,0.08);
+  border: 1px solid rgba(240,168,96,0.20);
   border-radius: 8px;
   padding: 4px 10px;
 }
@@ -55,14 +55,14 @@
 .prog-tier-num {
   font-size: 14px;
   font-weight: 700;
-  color: #f59e0b;
+  color: var(--text);
 }
 
 .prog-tier-max {
   font-size: 10px;
   font-weight: 700;
   color: #ef4444;
-  background: rgba(239,68,68,0.15);
+  background: rgba(239,68,68,0.12);
   border-radius: 4px;
   padding: 1px 5px;
 }
@@ -81,9 +81,9 @@
   margin-left: auto;
   font-size: 11px;
   font-weight: 600;
-  color: #f59e0b;
-  background: rgba(245,158,11,0.1);
-  border: 1px solid rgba(245,158,11,0.25);
+  color: var(--accent2);
+  background: rgba(240,168,96,0.08);
+  border: 1px solid rgba(240,168,96,0.18);
   border-radius: 99px;
   padding: 3px 9px;
 }
@@ -91,7 +91,7 @@
 .prog-bar-track {
   width: 100%;
   height: 8px;
-  background: rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.05);
   border-radius: 4px;
   overflow: hidden;
   margin-bottom: 10px;
@@ -99,10 +99,10 @@
 
 .prog-bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, #f59e0b, #ef4444);
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
   border-radius: 4px;
   transition: width 0.6s ease;
-  box-shadow: 0 0 8px rgba(245,158,11,0.4);
+  box-shadow: 0 0 8px rgba(232,133,58,0.3);
 }
 
 .prog-pass-row {
@@ -122,19 +122,19 @@
 .prog-pass-bar-track {
   flex: 1;
   height: 4px;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255,255,255,0.04);
   border-radius: 2px;
   overflow: hidden;
 }
 
 .prog-pass-bar-fill {
   height: 100%;
-  background: rgba(245,158,11,0.4);
+  background: rgba(240,168,96,0.35);
   border-radius: 2px;
   transition: width 0.6s ease;
 }
 
-.prog-pass-pct { font-size: 11px; color: #f59e0b; font-weight: 600; min-width: 30px; }
+.prog-pass-pct { font-size: 11px; color: var(--text); font-weight: 600; min-width: 30px; }
 .prog-total-xp { font-size: 11px; color: #334155; }
 
 /* Tabs */
@@ -147,23 +147,23 @@
 .prog-tab {
   flex: 1;
   background: transparent;
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 10px;
   color: #64748b;
   font-size: 13px;
   font-weight: 500;
-  padding: 7px 12px;
+  padding: 8px 12px;
   cursor: pointer;
   transition: all 0.15s;
   font-family: inherit;
 }
 
-.prog-tab:hover { color: #94a3b8; border-color: rgba(255,255,255,0.12); }
+.prog-tab:hover { color: #94a3b8; border-color: rgba(255,255,255,0.10); }
 
 .prog-tab.active {
-  background: rgba(245,158,11,0.08);
-  border-color: rgba(245,158,11,0.35);
-  color: #f59e0b;
+  background: rgba(240,168,96,0.06);
+  border-color: rgba(240,168,96,0.25);
+  color: var(--accent2);
 }
 
 /* Tier list layout */
@@ -174,7 +174,7 @@
   grid-template-columns: 44px 1fr 1fr;
   gap: 6px;
   padding: 0 0 8px;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
   margin-bottom: 4px;
 }
 
@@ -198,7 +198,7 @@
   max-height: 520px;
   overflow-y: auto;
   scrollbar-width: thin;
-  scrollbar-color: rgba(255,255,255,0.08) transparent;
+  scrollbar-color: rgba(255,255,255,0.06) transparent;
   padding-right: 4px;
 }
 
@@ -212,11 +212,11 @@
   transition: background 0.1s;
 }
 
-.prog-tier-row:hover { background: rgba(255,255,255,0.015); }
+.prog-tier-row:hover { background: rgba(255,255,255,0.01); }
 
 .prog-tier-milestone {
-  background: rgba(245,158,11,0.02);
-  border-bottom-color: rgba(245,158,11,0.1);
+  background: rgba(240,168,96,0.02);
+  border-bottom-color: rgba(240,168,96,0.08);
 }
 
 .prog-tier-num-col {
@@ -230,7 +230,7 @@
   gap: 1px;
 }
 
-.prog-tier-star { font-size: 10px; color: #f59e0b; }
+.prog-tier-star { font-size: 10px; color: var(--accent2); }
 
 .prog-tier-unlocked .prog-tier-num-col { color: #64748b; }
 
@@ -248,7 +248,7 @@
   align-items: center;
   gap: 6px;
   border: 1px solid transparent;
-  border-radius: 6px;
+  border-radius: 8px;
   padding: 5px 8px;
   font-size: 11px;
   transition: all 0.15s;
@@ -306,15 +306,15 @@
   align-items: center;
   gap: 12px;
   background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 12px;
   padding: 12px 14px;
   transition: border-color 0.15s;
 }
 
 .prog-ms-reached {
-  border-color: rgba(245,158,11,0.2);
-  background: rgba(245,158,11,0.03);
+  border-color: rgba(240,168,96,0.15);
+  background: rgba(240,168,96,0.02);
 }
 
 .prog-ms-card-icon { font-size: 28px; }
@@ -359,7 +359,7 @@
   align-items: center;
   gap: 8px;
   padding: 8px 10px;
-  border-radius: 7px;
+  border-radius: 8px;
   background: rgba(255,255,255,0.02);
   border: 1px solid rgba(255,255,255,0.04);
   font-size: 12px;
@@ -375,7 +375,7 @@
 
 .prog-log-xp {
   font-weight: 700;
-  color: #f59e0b;
+  color: var(--text);
   min-width: 55px;
   text-align: right;
 }
@@ -396,7 +396,7 @@
 
 /* Badge variant */
 .badge.orange {
-  background: rgba(245,158,11,0.12);
-  border-color: rgba(245,158,11,0.3);
-  color: #f59e0b;
+  background: rgba(240,168,96,0.10);
+  border-color: rgba(240,168,96,0.22);
+  color: var(--accent2);
 }
