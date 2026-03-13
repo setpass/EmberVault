@@ -1,0 +1,344 @@
+/* ─── Quests Panel ───────────────────────────────────────────────────────────── */
+
+.q-root { width: 100%; }
+
+/* Countdown chips */
+.q-countdowns {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.q-countdown-chip {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+.q-countdown-label {
+  font-size: 10px;
+  color: #475569;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.q-countdown-val {
+  font-size: 15px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Summary row */
+.q-summary-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 1.25rem;
+}
+
+.q-summary-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.q-summary-label {
+  font-size: 10px;
+  color: #475569;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.q-summary-bar-wrap { flex: 1; }
+
+.q-summary-count {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Tabs */
+.q-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 1.25rem;
+}
+
+.q-tab {
+  flex: 1;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 8px;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.q-tab:hover {
+  border-color: rgba(255,255,255,0.14);
+  color: #94a3b8;
+}
+
+.q-tab-badge {
+  font-size: 10px;
+  font-weight: 600;
+  background: rgba(255,255,255,0.06);
+  border-radius: 99px;
+  padding: 1px 7px;
+}
+
+/* Quest card grid */
+.q-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+/* Quest card */
+.q-card {
+  border-radius: 10px;
+  padding: 1rem;
+  border: 1px solid rgba(255,255,255,0.07);
+  background: rgba(255,255,255,0.02);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: border-color 0.15s, transform 0.15s;
+}
+
+.q-card:hover { transform: translateY(-2px); border-color: rgba(255,255,255,0.12); }
+.q-card-done  { opacity: 0.7; }
+
+.q-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.q-card-icon { font-size: 22px; line-height: 1; }
+
+.q-diff-pill {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border-radius: 99px;
+  padding: 2px 9px;
+}
+
+.q-card-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.q-card-desc {
+  font-size: 12px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.q-card-progress {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.q-pb-track {
+  flex: 1;
+  background: rgba(255,255,255,0.06);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.q-pb-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+
+.q-progress-pct {
+  font-size: 10px;
+  color: #475569;
+  min-width: 28px;
+  text-align: right;
+}
+
+.q-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.q-reward-badge {
+  font-size: 11px;
+  font-weight: 500;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 3px 8px;
+}
+
+.q-done-label {
+  font-size: 11px;
+  color: #10b981;
+  font-weight: 600;
+}
+
+/* ─── Story chapter list ─────────────────────────────────────────────────────── */
+
+.sq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.sq-row {
+  display: flex;
+  gap: 0;
+  position: relative;
+}
+
+/* Timeline */
+.sq-timeline {
+  width: 32px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 18px;
+  position: relative;
+}
+
+.sq-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  z-index: 1;
+  transition: box-shadow 0.3s;
+}
+
+.sq-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  left: 15px;
+  z-index: 0;
+}
+
+/* Story card */
+.sq-card {
+  flex: 1;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  padding: 0.9rem 1rem;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  background: rgba(255,255,255,0.02);
+}
+
+.sq-card:hover:not(.sq-locked) {
+  background: rgba(255,255,255,0.04);
+}
+
+.sq-done   { opacity: 0.65; }
+.sq-locked { cursor: default; opacity: 0.4; }
+
+.sq-active {
+  background: rgba(245,158,11,0.04);
+}
+
+.sq-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.sq-chapter-num {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sq-header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sq-card-icon { font-size: 16px; line-height: 1; }
+
+.sq-expand-btn {
+  font-size: 10px;
+  color: #475569;
+}
+
+.sq-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+/* Expanded story content */
+.sq-expanded {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  animation: sqExpand 0.2s ease;
+}
+
+@keyframes sqExpand {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.sq-lore {
+  background: rgba(245,158,11,0.05);
+  border-left: 2px solid rgba(245,158,11,0.4);
+  border-radius: 0 6px 6px 0;
+  padding: 10px 12px;
+  margin: 0;
+  position: relative;
+}
+
+.sq-lore-mark {
+  font-size: 28px;
+  color: rgba(245,158,11,0.3);
+  line-height: 0;
+  position: absolute;
+  top: 14px;
+  left: -2px;
+}
+
+.sq-desc {
+  font-size: 12px;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.sq-lore {
+  font-size: 13px;
+  color: #94a3b8;
+  font-style: italic;
+  line-height: 1.6;
+}

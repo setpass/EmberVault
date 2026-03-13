@@ -1,0 +1,120 @@
+{
+  "profile": {
+    "id": "operator-001",
+    "name": "Aurelian Forgekeeper",
+    "role": "Ember Architect",
+    "status": "White-Hot",
+    "description": "Operates a forge-themed identity vault where each secure action compounds reputation, chain pressure, and collectible outputs.",
+    "linkedWallets": 0,
+    "activeCredentials": 12,
+    "permissionScopes": 18,
+    "auditFlags": "0 fractures",
+    "health": {
+      "sessionHygiene": "Tempered",
+      "roleCoverage": "92%",
+      "recoveryState": "Backed in cold storage",
+      "riskLevel": "Low ember"
+    }
+  },
+  "forge": {
+    "rank": "Apprentice Ember",
+    "heat": 0,
+    "comboCount": 0,
+    "comboChain": "0 strike chain",
+    "totalActions": 0,
+    "actionsAtWhiteHeat": 0,
+    "walletLinks": 0,
+    "vaultSaves": 0,
+    "peakHeat": 0,
+    "maxComboReached": 0,
+    "comboRebuilds": 0,
+    "lastActionAt": null,
+    "lastActionType": null,
+    "heatHint": "90 heat to Starfire.",
+    "comboHint": "No active chain. Fire an action to start.",
+    "artifactHint": "Artifacts capture proof of momentum, not just files at rest.",
+    "doctrine": "Storage becomes craft when every action compounds.",
+    "motto": "Temper signal. Preserve proof. Leave a mark.",
+    "signatureName": "Chainfire Vault Loop",
+    "signatureDescription": "A forge-native progression loop: secure actions raise heat, sustained rhythm extends combo chains, and milestone runs mint artifacts that define operator identity.",
+    "seasonName": "Season of the First Flame",
+    "seasonDescription": "Limited-window forge trials designed to reward consistency, velocity, and precision rather than raw volume.",
+    "seasonProgress": 0,
+    "seasonDeadline": "Resets in 6 days",
+    "totalBreaks": 0
+  },
+  "artifacts": [],
+  "seasonalChallenges": [],
+  "credentials": [
+    {
+      "id": "cred-core-builder-pass",
+      "title": "Forgewright Pass",
+      "description": "Grants build-floor deployment and artifact minting authority.",
+      "status": "Active",
+      "tag": "green"
+    },
+    {
+      "id": "cred-beta-operator-badge",
+      "title": "Heatkeeper Badge",
+      "description": "Scopes access for high-pressure runtime checks and vault recovery drills.",
+      "status": "Scoped",
+      "tag": "blue"
+    },
+    {
+      "id": "cred-protocol-contributor-tag",
+      "title": "Starfire Contributor Tag",
+      "description": "Marks operators trusted to shape seasonal rules and forge doctrine.",
+      "status": "Review",
+      "tag": "purple"
+    }
+  ],
+  "permissions": [
+    {
+      "id": "perm-vault-write",
+      "name": "Vault write access",
+      "state": "Tempered"
+    },
+    {
+      "id": "perm-deploy-controls",
+      "name": "Deployment controls",
+      "state": "Forge Admin"
+    },
+    {
+      "id": "perm-protocol-ops",
+      "name": "Protocol operations",
+      "state": "Scoped"
+    },
+    {
+      "id": "perm-recovery-actions",
+      "name": "Recovery actions",
+      "state": "Dual-sign required"
+    }
+  ],
+  "activity": [],
+  "vaultRecords": [
+    {
+      "id": "vault-1",
+      "title": "Runbook: Ember Deploy",
+      "description": "Operational note for orchestrating secure releases without snapping combo momentum.",
+      "classification": "Internal"
+    },
+    {
+      "id": "vault-2",
+      "title": "Cold Reset Ritual",
+      "description": "Protected recovery procedure for re-linking trusted identities after a hard cooldown.",
+      "classification": "Restricted"
+    }
+  ],
+  "achievements": [],
+  "questState": {
+    "dailyKey": null,
+    "dailyIds": [],
+    "dailyBase": {},
+    "weeklyKey": null,
+    "weeklyIds": [],
+    "weeklyBase": {},
+    "completedDaily": [],
+    "completedWeekly": [],
+    "completedStory": []
+  }
+}
