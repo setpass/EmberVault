@@ -9,7 +9,12 @@ export default function ExplorerPage() {
   const [files, setFiles] = useState<FileMetadataView[]>([]);
 
   useEffect(() => {
-    aptosContractClient.getAllPublicFiles().then(setFiles);
+    aptosContractClient.getAllPublicFiles()
+      .then(setFiles)
+      .catch((error) => {
+        console.error("Failed to load public files:", error);
+        setFiles([]);
+      });
   }, []);
 
   return (

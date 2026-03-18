@@ -18,8 +18,13 @@ export default function Home() {
       setFiles([]);
       return;
     }
-    const data = await aptosContractClient.getUserFiles(account.address);
-    setFiles(data);
+    try {
+      const data = await aptosContractClient.getUserFiles(account.address);
+      setFiles(data);
+    } catch (error) {
+      console.error("Failed to load user files:", error);
+      setFiles([]);
+    }
   };
 
   useEffect(() => {

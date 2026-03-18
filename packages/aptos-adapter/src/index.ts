@@ -62,8 +62,9 @@ export class RealAptosService implements IAptosContractService {
 
   constructor(networkName: string, moduleAddress: string) {
     // Basic network mapping
-    const network = networkName.toLowerCase() === "mainnet" ? Network.MAINNET 
-                  : networkName.toLowerCase() === "devnet" ? Network.DEVNET 
+    const safeNetworkName = networkName || "testnet";
+    const network = safeNetworkName.toLowerCase() === "mainnet" ? Network.MAINNET 
+                  : safeNetworkName.toLowerCase() === "devnet" ? Network.DEVNET 
                   : Network.TESTNET;
     
     const config = new AptosConfig({ network });

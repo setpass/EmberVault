@@ -1,0 +1,23 @@
+
+> web@1.0.0 build C:\Users\ADMIN\Downloads\EmberVault-main\EmberVault-main\apps\web
+> next build
+
+  ▲ Next.js 14.2.3
+  - Environments: .env.local
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+Failed to compile.
+
+./components/header.tsx:24:36
+Type error: 'wallets' is possibly 'undefined'.
+
+[0m [90m 22 |[39m         {[33m![39mconnected [33m?[39m ([0m
+[0m [90m 23 |[39m           [33m<[39m[33mbutton[39m [0m
+[0m[31m[1m>[22m[39m[90m 24 |[39m             onClick[33m=[39m{() [33m=>[39m connect(wallets[[35m0[39m][33m.[39mname)}[0m
+[0m [90m    |[39m                                    [31m[1m^[22m[39m[0m
+[0m [90m 25 |[39m             className[33m=[39m[32m"bg-black text-white px-5 py-2 rounded-md font-medium text-sm hover:bg-gray-800 transition"[39m[0m
+[0m [90m 26 |[39m           [33m>[39m[0m
+[0m [90m 27 |[39m             [33mConnect[39m [33mWallet[39m[0m
+ ELIFECYCLE  Command failed with exit code 1.

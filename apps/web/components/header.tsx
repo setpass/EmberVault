@@ -21,7 +21,9 @@ export default function Header() {
       <div>
         {!connected ? (
           <button 
-            onClick={() => connect(wallets[0].name)}
+            onClick={() => {
+              if (wallets && wallets.length > 0) connect(wallets[0].name);
+            }}
             className="bg-black text-white px-5 py-2 rounded-md font-medium text-sm hover:bg-gray-800 transition"
           >
             Connect Wallet

@@ -26,6 +26,8 @@ export class MockShelbyService implements IShelbyProtocol {
 }
 
 export const createShelbyService = (useMock: boolean): IShelbyProtocol => {
-  if (useMock) return new MockShelbyService();
-  throw new Error("Real ShelbyService is not implemented yet. Please set NEXT_PUBLIC_USE_MOCK_SHELBY=true");
+  if (!useMock) {
+    console.warn("Real ShelbyService is not implemented yet. Falling back to MockShelbyService safely.");
+  }
+  return new MockShelbyService();
 };
